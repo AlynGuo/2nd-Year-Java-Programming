@@ -1,0 +1,78 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+//Guo, Alyssa Lyn J.     BIT301
+public class ActivityOne_ExerciseTwo {
+    
+    public static void main(String [] args){
+        
+        String lastName, firstName, middleInitial;
+        double q1, q2, q3, q4, q5, exam, classStanding;
+        double average, grade;
+        Scanner input = new Scanner(System.in);
+        
+        
+        //Accepts Students name
+        System.out.println("*Enter Lastname, Firstname & Middle Initial*");
+        lastName = input.nextLine();
+        firstName = input.nextLine();
+        middleInitial = input.nextLine();
+        
+        //Accepts quizzes
+        System.out.println("*Enter 5 quizzes*");
+        q1 = input.nextDouble();
+        int Q1 = (int)q1;
+        q2 = input.nextDouble();
+        int Q2 = (int)q2;
+        q3 = input.nextDouble();
+        int Q3 = (int)q3;
+        q4 = input.nextDouble();
+        int Q4 = (int)q4;
+        q5 = input.nextDouble();
+        int Q5 = (int)q5;
+        
+        System.out.println("");
+        
+        //Examination and class standings
+         System.out.println("*Enter examination & Class Standing*");
+        exam = input.nextDouble();
+        int ex = (int)exam;
+        classStanding = input.nextDouble();
+        int class_Standing = (int)classStanding;
+        
+        System.out.println("");
+        
+        //Computation!!!
+        average = (q1 + q2 + q3 + q4 + q5 ) / 5;
+        grade = (average + exam + classStanding) / 3;
+        DecimalFormat df = new DecimalFormat("#.##");
+        String formatted = df.format(grade);
+        
+         //prints
+        System.out.println("Lastname: " + lastName);
+        System.out.println("Firstname: " + firstName);
+        System.out.println("Middle Initial: " + middleInitial);
+        
+        System.out.println("");
+        
+               //prints
+        System.out.println("Quiz 1: " + Q1);
+        System.out.println("Quiz 2: " + Q2);
+        System.out.println("Quiz 3: " + Q3);
+        System.out.println("Quiz 4: " + Q4);
+        System.out.println("Quiz 5: " + Q5);
+        
+        System.out.println("");
+        
+           //prints
+        System.out.println("Examination: " + ex);
+        System.out.println("Class Standing: " + class_Standing);
+            
+        System.out.println("");
+        
+        //The results 
+        System.out.println("Good Day, " + firstName + " " + middleInitial + " " + lastName + "!");
+        System.out.println("Your Grade is " + formatted);
+      
+    }
+}
