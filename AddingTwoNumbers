@@ -1,0 +1,43 @@
+import java.io.*;
+
+       //Guo, Alyssa Lyn J.      BIT301
+public class ActivityOne_ExcerciseOne {
+    
+   public static void main(String[]args)throws IOException{
+       
+      BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       
+       double first, second, res;
+       String str = "";
+       System.out.println("Enter the 1st Number: ");
+       str = br.readLine();
+       first = Double.parseDouble(str);
+       System.out.println("Enter the 2nd Number: ");
+       str = br.readLine();
+       second = Double.parseDouble(str);
+       
+       System.out.println("");
+       //sum
+       res = first + second;
+       int sumRes = (int)res;
+       System.out.println("The Total of Two Numbers:" + sumRes);
+       
+       //difference
+       res = first - second;
+       int diffRes = (int)res;
+       System.out.println("The Difference of Two Numbers:" + diffRes);
+       
+       //Product
+       res = first * second;
+       int productRes = (int)res;
+       System.out.println("The Product of Two Numbers:" + productRes);
+       
+       //Divide
+      res = first / second;
+      float quotientRes = (float)res;
+      String quotient_Result = String.format("%.02f", quotientRes);
+      System.out.println("The Quotient of Two Numbers:" + quotient_Result);
+       
+       
+   }
+}
